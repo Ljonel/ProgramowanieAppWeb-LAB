@@ -38,6 +38,7 @@ main aside {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+  justify-content: center;
 }
 
 .card {
@@ -56,4 +57,32 @@ main aside {
 button {
   width: 30px;
   height: 20px;
+}
+
+section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.board {
+  overflow: hidden;
+  width: 680px;
+  height: 650px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 20px solid white;
+  border-radius: 16px;
+  background: rgb(223, 223, 223);
+}
+.board-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
 }
