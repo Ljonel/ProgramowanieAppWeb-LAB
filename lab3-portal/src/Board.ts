@@ -20,7 +20,7 @@ class Board {
   constructor(size: number) {
     this.cells = new Array(size);
     this.board = document.querySelector(".board");
-    this.title = document.querySelector(".title");
+    // this.title = document.querySelector(".title");
     this.div = document.querySelector(".title");
     this.moveCounter = 0;
     this.init(size);

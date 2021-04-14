@@ -1,15 +1,17 @@
+// import "./styles/styles.scss";
 import { Games } from "./games.enum";
 import { Game } from "./game.model";
 import { TicTacToe } from "./Tictactoe";
 import { BattleShips } from "./Battleships";
-import "./styles/styles.scss";
-
+// import variables from "./styles/variables.scss";
 class App {
   gameFactory: GamesFactory;
   enumLength: number = 0;
 
   constructor() {
     this.gameFactory = new GamesFactory();
+    this.runColors();
+
     this.initMenu();
   }
 
@@ -44,6 +46,16 @@ class App {
 
     document.querySelector("aside").appendChild(list);
     document.querySelector("main").appendChild(menuContainer);
+  }
+
+  runColors(): void {
+    const colors = document.querySelectorAll(".colors");
+    colors.forEach((element) => {
+      element.addEventListener("click", () => {
+        console.log(element.className.slice(7));
+        console.log(variables);
+      });
+    });
   }
 }
 
