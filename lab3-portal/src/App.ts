@@ -1,4 +1,4 @@
-// import "./styles/styles.scss";
+import * as styles from "./styles/styles.scss";
 import { Games } from "./games.enum";
 import { Game } from "./game.model";
 import { TicTacToe } from "./Tictactoe";
@@ -11,7 +11,6 @@ class App {
   constructor() {
     this.gameFactory = new GamesFactory();
     this.runColors();
-
     this.initMenu();
   }
 
@@ -53,7 +52,6 @@ class App {
     colors.forEach((element) => {
       element.addEventListener("click", () => {
         console.log(element.className.slice(7));
-        console.log(variables);
       });
     });
   }
